@@ -19,6 +19,10 @@ html {
     justify-items: center;
 }
 
+.container-results {
+    margin-top: 2em;
+}
+
 .container-homepage {
     height: 100vh;
     align-items: center;
@@ -34,18 +38,18 @@ html {
     width: 10.5rem;
 }
 
-.homepage-search-bar {
+.search-bar {
     grid-column: 1/-1;
     grid-row: 2;
 }
 
-.homepage-search-bar input {
+.search-bar input {
     width: 66vw;
     height: 11.8rem;
     padding-left: 1em;
 }
 
-.homepage-search-bar input[type=text] {
+.search-bar input[type=text] {
     font-size: 2.5em;
     font-family: 'Font Awesome\ 6 free' Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -55,15 +59,19 @@ html {
     border-radius: 0.5rem;
 }
 
-.homepage-search-bar input[type=text]::placeholder{
+.search-bar input[type=text]::placeholder{
     font-family: 'Font Awesome\ 6 free' Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: #a4a4a4;
 }
 
-.homepage-search-bar input[type=text]:focus {
+.search-bar input[type=text]:focus {
     outline: none;
     box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.results-search-bar input {
+    height: 5rem;
 }
 
 .homepage-search-bar p {
@@ -103,3 +111,45 @@ html {
     font-weight: 600
 }
 
+/* Results Page Styles */
+
+.results-posts-wrapper {
+    display: grid;
+    grid-row: 3;
+    grid-column: 1/-1;
+    width: 66vw;
+}
+
+.post {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.category-name {
+    color: #2660f3;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-post-title a {
+    color: #535353;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.results-post-links-wrapper {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+}
+
+.results-post-link {
+    color: #535353;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.results-post-link:hover {
+    text-decoration: underline;
+}
